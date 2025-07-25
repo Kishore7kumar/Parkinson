@@ -20,7 +20,7 @@ if st.button("Predict"):
             features = features.reshape(1, -1)
             scaled = scaler.transform(features)
             pred = model.predict(scaled)[0]
-            result = "🟥 Parkinson’s Detected" if pred == 1 else "🟩 No Parkinson’s Detected"
+            result = "⚠️ Parkinson’s Detected" if pred == 1 else "🟩 No Parkinson’s Detected"
             st.success(f"Prediction: {result}")
             
     except Exception as e:
